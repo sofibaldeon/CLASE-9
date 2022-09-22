@@ -32,16 +32,16 @@ function inicializarElementos(){
 }
 
 function inicializarEventos() {
-    formulario.onsubmit = (x) => validarFormulario(x)
+    formulario.onsubmit = (event) => validarFormulario(event)
 }
 
-function validarFormulario(x) {
+function validarFormulario(event) {
     x.preventDefault()
     let idProducto = inputId.value
     let nombre = inputNombre.value
     let precioCompra = parseFloat(inputPrecioCompra.value)
     let precioVenta = parseFloat(inputPrecioVenta.value)
-    let cantidad = parseFloat(cantidad.value)
+    let cantidad = parseFloat(inputCantidad.value)
 
     let producto = new Producto(idProducto, nombre, precioCompra, precioVenta, cantidad)
     
@@ -99,4 +99,4 @@ function main() {
     inicializarEventos()
 }
 
-main();
+main()
