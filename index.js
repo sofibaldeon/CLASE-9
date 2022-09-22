@@ -36,7 +36,7 @@ function inicializarEventos() {
 }
 
 function validarFormulario(event) {
-    x.preventDefault()
+    event.preventDefault()
     let idProducto = inputId.value
     let nombre = inputNombre.value
     let precioCompra = parseFloat(inputPrecioCompra.value)
@@ -93,7 +93,7 @@ function eliminarProducto(idProducto) {
         productos.splice(indiceBorrar, 1);
         columnaBorrar.remove();
 }
-
+}
 function main() {
     inicializarElementos()
     inicializarEventos()
